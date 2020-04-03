@@ -24,7 +24,7 @@ public class OpenCSVReader {
         ) {
             // Reading Records One by One in a String array
             String[] nextRecord;
-            while ((nextRecord = csvReader.readNext()) != null) {
+            while ((nextRecord = csvReader.readNext()) != null) { //CSVReader will provide readNext method
                 System.out.println("Name : " + nextRecord[0]);
                 System.out.println("Email : " + nextRecord[1]);
                 System.out.println("Phone : " + nextRecord[2]);
@@ -39,7 +39,7 @@ public class OpenCSVReader {
                 CSVReader csvReader = new CSVReader(reader);
         ) {
             // Reading All Records at once into a List<String[]>
-            List<String[]> records = csvReader.readAll();
+            List<String[]> records = csvReader.readAll(); // CSVReader class is providing readAll() method
             for (String[] record : records) {
                 System.out.println("Name : " + record[0]);
                 System.out.println("Email : " + record[1]);
