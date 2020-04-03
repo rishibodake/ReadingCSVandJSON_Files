@@ -11,8 +11,9 @@ public class OpenCSVReader {
         public static void main(String[] args) throws IOException {
             try (
 
-                    Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));//inbuilt class Reader
-                    CSVReader csvReader = new CSVReader(reader);
+                    Reader reader = Files.newBufferedReader(Paths.get(SAMPLE_CSV_FILE_PATH));//Paths.get method is associated with import java.nio.file.Paths
+                    //path.get method converts path string into path instance
+                    CSVReader csvReader = new CSVReader(reader); //CSVReader is inbuilt class in java
             ) {
                 // Reading Records One by One in a String array
                 String[] nextRecord;
